@@ -1,4 +1,4 @@
-package com.rafalropel.mvvmfavdishes
+package com.rafalropel.mvvmfavdishes.view.activities
 
 import android.content.Intent
 import android.os.Build
@@ -10,6 +10,7 @@ import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import com.rafalropel.mvvmfavdishes.R
 import com.rafalropel.mvvmfavdishes.databinding.ActivitySplashScreenBinding
 
 @Suppress("DEPRECATION")

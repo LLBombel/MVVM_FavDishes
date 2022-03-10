@@ -4,4 +4,15 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="splash_screen_title">FavDishes</string>
+    <string name="add_dish">Dodaj posiłek</string>
+    <string name="lbl_title">Nazwa</string>
+    <string name="lbl_type">Rodzaj</string>
+    <string name="lbl_category">Kategoria</string>
+    <string name="lbl_ingredients">Składniki</string>
+    <string name="lbl_cooking_time_in_minutes">Czas przygotowania</string>
+    <string name="lbl_direction_to_cook">Przepis</string>
+    <string name="title_select_image">Wybierz akcję</string>
+    <string name="lbl_camera">Aparat</string>
+    <string name="lbl_gallery">Galeria</string>
+
 </resources>

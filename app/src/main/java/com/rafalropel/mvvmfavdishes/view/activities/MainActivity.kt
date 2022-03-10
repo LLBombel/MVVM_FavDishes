@@ -1,4 +1,4 @@
-package com.rafalropel.mvvmfavdishes
+package com.rafalropel.mvvmfavdishes.view.activities
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.rafalropel.mvvmfavdishes.R
 import com.rafalropel.mvvmfavdishes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

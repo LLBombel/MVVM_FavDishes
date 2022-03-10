@@ -1,4 +1,4 @@
-package com.rafalropel.mvvmfavdishes.ui.notifications
+package com.rafalropel.mvvmfavdishes.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.rafalropel.mvvmfavdishes.databinding.FragmentNotificationsBinding
+import com.rafalropel.mvvmfavdishes.viewmodel.NotificationsViewModel
 
 class NotificationsFragment : Fragment() {
 

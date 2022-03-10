@@ -1,4 +1,4 @@
-package com.rafalropel.mvvmfavdishes.ui.home
+package com.rafalropel.mvvmfavdishes.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
