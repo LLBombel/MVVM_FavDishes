@@ -14,5 +14,8 @@
     <string name="title_select_image">Wybierz akcję</string>
     <string name="lbl_camera">Aparat</string>
     <string name="lbl_gallery">Galeria</string>
+    <string name="permissions_denied">Nie dodano pozwoleń, mogą zostać dodane w Ustawieniach</string>
+    <string name="go_to_settings">Idź do Ustawień</string>
+    <string name="Cancel">Anuluj</string>
 
 </resources>
