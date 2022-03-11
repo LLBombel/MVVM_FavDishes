@@ -11,7 +11,7 @@
         android:id="@+id/toolbar_add_dish_activity"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/primary_color"
+        android:background="@drawable/gradient"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -133,6 +133,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_ingredients"
+                app:boxStrokeColor="@color/primary_light_color"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -184,6 +185,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/til_direction_to_cook"
+                app:boxStrokeColor="@color/primary_light_color"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -206,7 +208,7 @@
                     android:textSize="@dimen/_15sdp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_add_dish"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -217,6 +219,7 @@
                 android:layout_marginBottom="@dimen/_20sdp"
                 android:foreground="?attr/selectableItemBackground"
                 android:gravity="center"
+               android:backgroundTint="@color/primary_color"
                 android:text="@string/add_dish"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

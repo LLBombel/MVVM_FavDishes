@@ -17,5 +17,12 @@
     <string name="permissions_denied">Nie dodano pozwoleń, mogą zostać dodane w Ustawieniach</string>
     <string name="go_to_settings">Idź do Ustawień</string>
     <string name="Cancel">Anuluj</string>
+    <string name="please_select_image">Nie wybrano zdjęcia</string>
+    <string name="please_select_title">Prosze wprowadzić nazwę</string>
+    <string name="please_select_type">Nie wybrano rodzaju</string>
+    <string name="please_select_category">Nie wybrano kategorii</string>
+    <string name="please_select_ingredients">Proszę wprowadzić składniki</string>
+    <string name="please_select_cooking_time">Nie wybrano czasu przygotowania</string>
+    <string name="please_select_cooking_recipe">Prosze wpisać przepis</string>
 
 </resources>
