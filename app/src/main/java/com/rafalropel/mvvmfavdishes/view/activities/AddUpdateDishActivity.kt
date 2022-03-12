@@ -16,6 +16,7 @@ import android.provider.Settings
 import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toBitmap
@@ -26,6 +27,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import com.google.android.material.snackbar.Snackbar
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -35,11 +37,15 @@ import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.karumi.dexter.listener.single.PermissionListener
 import com.rafalropel.mvvmfavdishes.R
+import com.rafalropel.mvvmfavdishes.application.FavDishApplication
 import com.rafalropel.mvvmfavdishes.databinding.ActivityAddUpdateDishBinding
 import com.rafalropel.mvvmfavdishes.databinding.DialogChooseImageBinding
 import com.rafalropel.mvvmfavdishes.databinding.DialogSelectListBinding
+import com.rafalropel.mvvmfavdishes.model.entities.FavDishEntity
 import com.rafalropel.mvvmfavdishes.util.Constants
 import com.rafalropel.mvvmfavdishes.view.adapter.SelectListAdapter
+import com.rafalropel.mvvmfavdishes.viewmodel.FavDishViewModel
+import com.rafalropel.mvvmfavdishes.viewmodel.FavDishViewModelFactory
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -50,6 +56,10 @@ class AddUpdateDishActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddUpdateDishBinding
     private var mImagePath: String = ""
     private lateinit var mSelectDialog: Dialog
+    private val mFavDishViewModel: FavDishViewModel by viewModels {
+        FavDishViewModelFactory((application as FavDishApplication).repository)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddUpdateDishBinding.inflate(layoutInflater)
@@ -147,7 +157,21 @@ class AddUpdateDishActivity : AppCompatActivity() {
                     ).show()
                 }
                 else -> {
-                    Toast.makeText(this, "Wszystkie dane prawidłowe", Toast.LENGTH_SHORT).show()
+                    val favDishDetails = FavDishEntity(
+                        mImagePath,
+                        Constants.DISH_IMAGE_SOURCE_LOCAL,
+                        title,
+                        type,
+                        category,
+                        ingredients,
+                        cookingTime,
+                        cookingDirection,
+                        false
+                    )
+
+                    mFavDishViewModel.insert(favDishDetails)
+                    Toast.makeText(this, "Dodano danie", Toast.LENGTH_SHORT).show()
+                    finish()
                 }
             }
         }

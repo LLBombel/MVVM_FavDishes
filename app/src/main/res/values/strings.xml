@@ -24,5 +24,9 @@
     <string name="please_select_ingredients">Proszę wprowadzić składniki</string>
     <string name="please_select_cooking_time">Nie wybrano czasu przygotowania</string>
     <string name="please_select_cooking_recipe">Prosze wpisać przepis</string>
+    <string name="no_dishes_added">Brak dodanych posiłków</string>
+    <string name="all_dishes">Wszystkie dania</string>
+    <string name="favourites">Ulubione</string>
+    <string name="random_dish">Losowe danie</string>
 
 </resources>

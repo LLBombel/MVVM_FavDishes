@@ -9,6 +9,8 @@ import com.rafalropel.mvvmfavdishes.model.entities.FavDishEntity
 
 @Database(entities = [FavDishEntity::class], version = 1)
 abstract class FavDishDatabase : RoomDatabase() {
+
+    abstract fun favDishDao(): FavDishDao
     companion object {
 
         @Volatile
